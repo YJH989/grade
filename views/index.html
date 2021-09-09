@@ -1,0 +1,96 @@
+<!-- 
+ index.html - Ethereum Wallet
+ Author : Soto Jang (sotolabedu@gmail.com)
+ Copyright (c) Sunstar Since 2015. All Rights Reserved. See LICENSE file.
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>성적 관리 앱</title>
+    <link rel="stylesheet" type="text/css" href="css/document-registry.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/sha256.min.js"></script>
+    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+    <script src="js/argiculture.js"></script>
+</head>
+
+<body>
+    <header id="menu">
+        <a href="#" id="linkHome">Home</a>
+        <a href="#" id="linkSubmitDocument">성적 이력 등록</a>
+        <a href="#" id="linkVerifyDocument">성적 이력 검증</a>
+    </header>
+
+    <main>
+        <section id="loadingBox">Loading ...</section>
+
+        <section id="infoBox"><header>x</header><p>Info</p></section>
+
+        <section id="errorBox"><header>x</header><p>Error</p></section>
+
+      
+
+        <section id="viewHome">
+            <h1>Agriculture DApp with MetaMask</h1>
+            Welcome to the "Agriculture DApp with MetaMask" DApp. This
+            decentralized app runs on the Etherereum blockchain network and
+            holds a registry of items in a Solidity smart contract.
+            <ul>
+                <li>성적을 확인 할 수 있습니다.</li>
+                <li><b>사용자는</b> 성적을 등록할 수 있습니다.</li>
+                <li>
+                    Contract <b>address</b> (at Ropsten testnet):
+                    <a href="#" id="contractLink" target="_blank"></a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="viewSubmitDocument">
+            <h1>성적 이력관리 등록</h1>
+            <p>성적을 등록해 주세요. 학번, 이름, 점수를 입력해 주시면 됩니다.</p>
+
+                <label>학번:
+                    <input type="text" id="pronumber" name="pronumber" value="10" placeholder="1 many..">
+                </label>
+                <br>
+                <label>이름:
+                    <input type="text" id="proname" name="proname" value="감귤" placeholder="What is ..">
+                </label>
+                <br>
+                <label>점수:
+                    <input type="text" id="proloc" name="proloc" value="제주" placeholder="Where is ..">
+                </label>
+                <br>
+                <label>제출:
+                    <input type="button" id="itemUploadButton" value="submit">
+                </label>
+
+                <br>
+                <br>
+                <br>
+
+                <div>
+                    <input type="button" id="showTableButton" value="List Show" />
+                </div>
+                <br>
+
+               
+                <div id="myTable"></div>
+
+               
+            
+        </section>
+
+        <section id="viewVerifyDocument">
+            <h1>Verify a Document</h1>
+            <p>Blockchain users can verify documents by checking whether they exist in the "Document Registry" smart contract on the Ethereum blockchain decentralized network.</p>
+            <!-- <input type="file" id="documentToVerify" /><br/> -->
+            <input type="button" id="documentVerifyButton" value="Submit" />
+        </section>
+    </main>
+    
+    <footer><a href="https://github.com/sotolab/nodeRopstenMetamskDocumentRegistry">Argiculture Registry</a> - Copyright &copy; SotoLAB, Since 2015</footer>
+</body>
+</html>
